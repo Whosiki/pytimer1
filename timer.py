@@ -12,7 +12,7 @@ while timerins > 0:
     sec=timerins%60
     min=(timerins%3600 -sec)//60
     hr=timerins//3600
-    print(f"\r Remaining time[{hr}:{min}:{sec}]",end="")
+    print(f"\rRemaining time[{hr}:{min}:{sec}]",end="")
     timerins-=1
     time.sleep(1)
 print("\r Time's up!!")
