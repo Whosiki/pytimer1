@@ -8,11 +8,11 @@ cutpos=tvalue.find(":")
 mtosvalue=int(tvalue[0:cutpos])*60
 svalue=int(tvalue[cutpos + 1:])
 timerins=htosvalue+mtosvalue+svalue
-while timerins > 0:
+while timerins >= 0:
     sec=timerins%60
     min=(timerins%3600 -sec)//60
     hr=timerins//3600
     print(f"\rRemaining time[{hr}:{min}:{sec}]",end="")
     timerins-=1
     time.sleep(1)
-print("\r Time's up!!")
+print("Time's up!!")
